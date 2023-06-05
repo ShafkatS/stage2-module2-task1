@@ -13,8 +13,8 @@ import java.util.Set;
 
 
 @WebServlet("/users")
-public class GetUsersServlet {
-     @Override
+public class GetUsersServlet extends HttpServlet {
+     
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         Set<User> userSet = Warehouse.getInstance().getUsers();
